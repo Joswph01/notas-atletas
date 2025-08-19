@@ -9,7 +9,7 @@ class Competicao {
       })
     }
     calcularMedias(notasOrdenadas){
-        let notasValidas = notasOrdenadas.slice(1,4);
+        let notasValidas = notasOrdenadas.slice(1,notasOrdenadas.length - 1);
         let soma = notasValidas.reduce((acc, nota) => acc + Number(nota), 0);
         return soma /notasValidas.length;
   
@@ -23,7 +23,7 @@ class Competicao {
   
           console.log(`Atleta: ${atleta.nome}`);
           console.log(`Notas obtidas: ${atleta.notas.join(", ")}`)
-          console.log(`Medias obtidas: ${media}`)
+          console.log(`Medias obtidas: ${media.toFixed(2)}`)
         })
     }
     
